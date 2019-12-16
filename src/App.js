@@ -4,7 +4,7 @@ import './App.scss';
 import Icon from "./components/sharedComponents/Icon";
 
 function App() {
-  let a = ["commentNotification",
+  let iconList = ["commentNotification",
     "commentPost",
     "likeNotification",
     "likePost.png",
@@ -20,7 +20,7 @@ function App() {
     "usernameLogIn",]
   return (
     <div className="App">
-      {a.map(name =>{
+      {iconList.map(name =>{
         return <Icon name={name} key={name+name.index} />
       })}
     </div>

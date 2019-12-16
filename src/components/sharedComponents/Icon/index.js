@@ -1,85 +1,101 @@
 import './icon.scss'
 import React, {Component} from 'react';
 
+import commentNotification from "./img/commentNotification.png"
+import commentPost from "./img/commentPost.png"
+import likeNotification from "./img/likeNotification.png"
+import likePost from "./img/likePost.png"
+import logo from "./img/logo.png"
+import options from "./img/options.png"
+import passwordLogIn from "./img/passwordLogIn.png"
+import profile from "./img/profile.png"
+import save from "./img/save.png"
+import search from "./img/search.png"
+import settings from "./img/settings.png"
+import sharePost from "./img/sharePost.png"
+import subscriptionNotification from "./img/subscriptionNotification.png"
+import usernameLogIn from "./img/usernameLogIn.png"
+
 class Icon extends Component {
     render() {
         const icons = [
             {
                 type: "commentNotification",
-                url: "img/commentNotification.png",
+                url: commentNotification,
                 classes: ""
             },
             {
                 type: "commentPost",
-                url: "img/commentPost.png",
-                classes: "feed-post-footer-icon"
+                url: commentPost,
+                classes: ""
             },
             {
                 type: "likeNotification",
-                url: "img/likeNotification.png",
+                url: likeNotification,
                 classes: ""
             },
             {
                 type: "likePost.png",
-                url: "img/likePost.png",
-                classes: "feed-post-footer-icon"
+                url: likePost,
+                classes: ""
             },
             {
                 type: "logo",
-                url: "img/logo.png",
+                url: logo,
                 classes: ""
             },
             {
                 type: "options",
-                url: "img/options.png",
-                classes: "feed-post-footer-icon"
+                url: options,
+                classes: ""
             },
             {
                 type: "passwordLogIn",
-                url: "img/passwordLogIn.png",
+                url: passwordLogIn,
                 classes: ""
             },
             {
                 type: "profile",
-                url: "img/profile.png",
+                url: profile,
                 classes: ""
             },
             {
                 type: "save",
-                url: "img/save.png",
-                classes: "feed-post-footer-icon"
+                url: save,
+                classes: ""
             },
             {
                 type: "search",
-                url: "img/search.png",
+                url: search,
                 classes: ""
             },
             {
                 type: "settings",
-                url: "img/settings.png",
+                url: settings,
                 classes: ""
             },
             {
                 type: "sharePost",
-                url: "img/sharePost.png",
-                classes: "feed-post-footer-icon"
+                url: sharePost,
+                classes: ""
             },
             {
                 type: "subscriptionNotification",
-                url: "img/subscriptionNotification.png",
+                url: subscriptionNotification,
                 classes: ""
             },
             {
                 type: "usernameLogIn",
-                url: "img/usernameLogIn.png",
+                url: usernameLogIn,
                 classes: ""
             },
         ];
         const icon = icons.find(icon =>{
             return this.props.name === icon.type
         });
+        console.log(icon.url);
         return (
-            <img src="./img/usernameLogIn.png" className={icon.classes} alt=""/>
+            <img src={icon.url} className={icon.classes} alt=""/>
         );
     }
 }
