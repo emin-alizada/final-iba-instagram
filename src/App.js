@@ -1,24 +1,28 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.scss';
+import Icon from "./components/sharedComponents/Icon";
 
 function App() {
+  let a = ["commentNotification",
+    "commentPost",
+    "likeNotification",
+    "likePost.png",
+    "logo",
+    "options",
+    "passwordLogIn",
+    "profile",
+    "save",
+    "search",
+    "settings",
+    "sharePost",
+    "subscriptionNotification",
+    "usernameLogIn",]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {a.map(name =>{
+        return <Icon name={name} key={name+name.index} />
+      })}
     </div>
   );
 }
