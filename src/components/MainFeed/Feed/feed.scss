@@ -1,0 +1,35 @@
+.feed-post{
+  max-width: 804px;
+}
+
+
+.feed-post-header{
+  display: flex;
+  align-items: center;
+}
+
+.feed-post-header-pp{
+  margin-right: 15px;
+}
+
+.feed-post-header-back{
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+
+.feed-post-footer{
+  display: flex;
+}
+
+.feed-post-footer-icon{
+  width: calc(100%/3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feed-post-footer-icon:nth-child(2){
+  border-left: 1px solid #b3b3b3;
+  border-right: 1px solid #b3b3b3;
+}
