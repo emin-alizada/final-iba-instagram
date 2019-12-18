@@ -47,7 +47,7 @@ class Icon extends Component {
             {
                 type: "options",
                 url: options,
-                classes: ""
+                classes: "options-button"
             },
             {
                 type: "passwordLogIn",
@@ -57,7 +57,7 @@ class Icon extends Component {
             {
                 type: "profile",
                 url: profile,
-                classes: ""
+                classes: "profile-logo"
             },
             {
                 type: "save",
@@ -67,7 +67,7 @@ class Icon extends Component {
             {
                 type: "search",
                 url: search,
-                classes: ""
+                classes: "search-icon"
             },
             {
                 type: "settings",
