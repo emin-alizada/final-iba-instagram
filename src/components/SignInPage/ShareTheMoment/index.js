@@ -1,5 +1,5 @@
 import React from "react";
-class Sharethemoment extends React.Component{
+class ShareTheMoment extends React.Component{
 
     render() {
         return(
@@ -13,4 +13,4 @@ class Sharethemoment extends React.Component{
 
 }
 
-export default Sharethemoment;
+export default ShareTheMoment;

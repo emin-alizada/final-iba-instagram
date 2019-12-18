@@ -1,7 +1,7 @@
 import React from "react";
 import Icon from "../../sharedComponents/Icon";
 import './css/sginInPanel.scss'
-class Signinpanel extends React.Component {
+class SignInPanel extends React.Component {
     render() {
         return (
 
@@ -32,4 +32,4 @@ class Signinpanel extends React.Component {
     }
 }
 
-export default Signinpanel;
+export default SignInPanel;

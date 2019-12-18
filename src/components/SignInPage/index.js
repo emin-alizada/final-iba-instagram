@@ -1,21 +1,21 @@
 import React from "react";
 import "./css/SignInPage.scss";
-import Signinpanel from './SigninRegisterPanel/index'
-import Sharethemoment from "./ShareTheMoment";
+import SignInPanel from './SigninRegisterPanel/index'
+import ShareTheMoment from "./ShareTheMoment";
 import './css/SiginPage-media.scss'
 
 
 
-class Signinpage extends React.Component {
+class SignInPage extends React.Component {
     render() {
         return (
             <div className={"sign-in-page"}>
-                <Signinpanel/>
-                <Sharethemoment/>
+                <SignInPanel/>
+                <ShareTheMoment/>
 
             </div>
         );
     }
 }
 
-export default Signinpage;
+export default SignInPage;
