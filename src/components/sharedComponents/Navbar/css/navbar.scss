@@ -1,0 +1,49 @@
+.navbar{
+
+padding: 20px 0px;
+position: fixed;
+  display: block;
+  top: 0px;
+  z-index: 9999;
+  width: 100%;
+  background-color: white;
+}
+.navbar:after{
+  clear: both;
+}
+
+.my-container{
+  width: 80%;
+  margin: 0 auto;
+  display:flex;
+  justify-content: space-between;
+}
+
+.navbar-right {
+display: flex;
+
+}
+  .search{
+    display: flex;
+    border-bottom: 1px solid #b3b3b3;
+    align-self: center;
+    padding: 5px;
+  }
+  .search-icon{
+    align-self: center;
+    margin-right: 10px;
+  }
+
+  .search-field{
+    border: none;
+    outline: none;
+font-size: 14px;
+  }
+  .search-field::placeholder{
+
+    color: #b3b3b3;
+  }
+.profile-logo{
+  align-self: center;
+  margin-left: 40px;
+}
