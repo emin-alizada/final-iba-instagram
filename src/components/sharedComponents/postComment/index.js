@@ -11,11 +11,14 @@ class PostComment extends React.Component {
                 <div className={"post-comment-window"}>
                     <img src={require("./img/post-comment-dog.png")} alt=""/>
                     <div className={"comment-section"}>
-                        <div className={"comment-section-user"}>
-                            <img src={require("./img/laura-comment.png")} alt="" className={"comment-section-user-img"}/>
-                            <p className={"comment-section-username"}>laura.stanley</p>
+                        <div className="comment-section-top">
+                            <div className={"comment-section-user"}>
+                                <img src={require("./img/laura-comment.png")} alt="" className={"comment-section-user-img"}/>
+                                <p className={"comment-section-username"}>laura.stanley</p>
+                            </div>
                             <Icon name = {"options"}/>
                         </div>
+
                         <div className={"posted-comments"}>
                             <PostedComment/>
                             <PostedComment/>
@@ -34,7 +37,11 @@ class PostComment extends React.Component {
                             </div>
                         </div>
                             <div className="write-comment">
-                                <input type="text" className={"write-comment-input"}/>
+                                <input type="text" className={"write-comment-input"} placeholder={"write something..."}/>
+                                <button className="send-comment-btn">send</button>
+                                {/*<div className={"send-comment-btn"}>*/}
+                                {/*    /!*<p className="send-comment-btn-arrow"> send </p>*!/*/}
+                                {/*</div>*/}
 
                             </div>
                     </div>
