@@ -93,7 +93,7 @@ class Icon extends Component {
         const icon = icons.find(icon =>{
             return this.props.name === icon.type
         });
-        console.log(icon.url);
+        // console.log(icon.url);
         return (
             //if we need send then this implementation
             <img //style={{
