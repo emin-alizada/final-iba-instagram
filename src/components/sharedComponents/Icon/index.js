@@ -35,7 +35,7 @@ class Icon extends Component {
                 classes: ""
             },
             {
-                type: "likePost.png",
+                type: "likePost",
                 url: likePost,
                 classes: ""
             },
@@ -77,7 +77,7 @@ class Icon extends Component {
             {
                 type: "sharePost",
                 url: sharePost,
-                classes: ""
+                classes: "sharePost"
             },
             {
                 type: "subscriptionNotification",
@@ -93,11 +93,17 @@ class Icon extends Component {
         const icon = icons.find(icon =>{
             return this.props.name === icon.type
         });
-        console.log(icon.url);
+        // console.log(icon.url);
         return (
-            <img src={icon.url} className={icon.classes} alt=""/>
-
-
+            //if we need send then this implementation
+            <img //style={{
+                //     width: this.props.size,
+                //     height:this.props.size,
+                //     objectFit: 'contain',
+                //     objectPosition: 'center'
+                // }}
+                 src={icon.url}
+                 className={icon.classes} alt=""/>
         );
     }
 }

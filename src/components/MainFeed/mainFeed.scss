@@ -1,0 +1,16 @@
+.container-for-feed{
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 100px;
+}
+
+.fixed-main-feed-profile{
+  width: calc((100% - 804px) / 1.5)
+}
+
+.fixed-main-feed-profile-wrapper{
+  position: sticky;
+  top: 110px;
+  left: 0;
+}

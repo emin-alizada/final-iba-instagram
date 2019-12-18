@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Icon from "../Icon";
+import "./css/navbar.scss"
 
 class Navbar extends Component {
     render() {
@@ -15,8 +16,6 @@ class Navbar extends Component {
                         </div>
                         <Icon name={ "profile"}/>
                     </div>
-
-
                 </div>
             </div>
         );
