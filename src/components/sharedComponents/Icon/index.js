@@ -42,7 +42,7 @@ class Icon extends Component {
             {
                 type: "logo",
                 url: logo,
-                classes: ""
+                classes: "logo"
             },
             {
                 type: "options",
@@ -52,7 +52,7 @@ class Icon extends Component {
             {
                 type: "passwordLogIn",
                 url: passwordLogIn,
-                classes: ""
+                classes: "password-icon"
             },
             {
                 type: "profile",
@@ -87,7 +87,7 @@ class Icon extends Component {
             {
                 type: "usernameLogIn",
                 url: usernameLogIn,
-                classes: ""
+                classes: "username-icon"
             },
         ];
         const icon = icons.find(icon =>{
@@ -96,6 +96,8 @@ class Icon extends Component {
         console.log(icon.url);
         return (
             <img src={icon.url} className={icon.classes} alt=""/>
+
+
         );
     }
 }
