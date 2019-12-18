@@ -40,11 +40,11 @@ class MainFeedProfile extends Component {
                     </div>
                     <div className="main-feed-profile-info-text">
                         <p>Following</p>
-                        <p>666</p>
+                        <p>{this.state.user.number_followers}</p>
                     </div>
                     <div className="main-feed-profile-info-text">
                         <p>Followers</p>
-                        <p>666</p>
+                        <p>{this.state.user.number_follow}</p>
                     </div>
                 </div>
                 <div className={"main-feed-profile-icons"}>
