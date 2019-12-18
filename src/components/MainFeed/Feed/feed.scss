@@ -1,5 +1,6 @@
 .feed-post{
   max-width: 804px;
+  margin-bottom: 100px;
 }
 
 
@@ -9,12 +10,19 @@
 }
 
 .feed-post-header-pp{
+  border-radius: 30%;
   margin-right: 15px;
+  width: 64px;
+  height: 64px;
 }
 
 .feed-post-header-back{
   margin-left: auto;
   margin-right: 10px;
+}
+
+.feed-post-photo{
+  margin-bottom: 15px;
 }
 
 
@@ -32,4 +40,50 @@
 .feed-post-footer-icon:nth-child(2){
   border-left: 1px solid #b3b3b3;
   border-right: 1px solid #b3b3b3;
+}
+
+.feed-post-photo{
+  width: 804px;
+}
+
+.feed-post-header-text{
+  margin-right: auto;
+}
+
+.feed-post-comment-container{
+  margin-top: 30px;
+  padding: 0 70px;
+}
+
+.feed-post-comment{
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.feed-post-comment-username{
+  color: #4d4d4d;
+  font-weight: bold;
+  font-size: 26px;
+  margin-right: 30px;
+}
+
+.feed-post-comment-itself{
+  color: #4d4d4d;
+  font-weight: lighter;
+  font-size: 26px;
+}
+
+.feed-post-comment-view-all{
+  font-size: 20px;
+  color: #ccc;
+  text-decoration: none;
+}
+
+.feed-post-comment-new-text{
+  width: 85%;
+
+}
+
+.feed-post-comment-new-submit{
+  width: 10%;
 }
