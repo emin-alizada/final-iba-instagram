@@ -1,0 +1,137 @@
+.sign-in-panel{
+
+  padding: 20px;
+display: inline-block;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0px 0px 20px 1px grey;
+align-self: center;
+  margin: 100px 0px;
+
+}
+
+.logo{
+
+  padding-top: 30px;
+  width: 50px;
+
+}
+.logo-after{
+
+  height: 2px;
+  width: 270px;
+  background-color: #e6e6e6;
+  display: block;
+  margin: 40px auto 70px;
+
+}
+
+.login-form {
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+.username{
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3px solid #e6e6e6;
+  margin-bottom: 20px;
+
+}
+
+.username-field{
+
+  padding: 20px 50px 20px 20px;
+  border: none;
+  width: 100%;
+font-size: 20px;
+  color: #b3b3b3;
+outline: none;
+}
+
+.username-field::placeholder{
+  font-size: 20px;
+color: lightgray;
+}
+
+.username-icon{
+  align-self: center;
+
+}
+
+
+.password {
+
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3px solid #e6e6e6;
+
+}
+
+.password-field{
+  //padding: 20px 150px 20px 20px;
+  padding: 20px 50px 20px 20px;
+  width: 100%;
+  border: none;
+  font-size: 20px;
+  color: #b3b3b3;
+  outline: none;
+
+
+}
+
+
+
+.password-field::placeholder{
+  font-size: 20px;
+  color: lightgray;
+
+}
+
+.password-icon{
+  align-self: center;
+
+
+}
+
+.login-button{
+  background-color: white;
+  border: 2px solid #46d0d6 ;
+  border-radius: 40px;
+align-self: center;
+padding: 15px 60px;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #46d0d6;
+  margin-top: 50px;
+}
+.login-button:hover{
+
+  background-color: #46d0d6 ;
+  color: white;
+  transition: all 0.5s;
+
+}
+
+.or{
+  padding: 15px 0px;
+  font-size: 15px;
+  color: #b3b3b3;
+
+}
+
+.register-button{
+  text-transform: uppercase;
+  color: #5fd6db;
+  font-family: inherit;
+  margin:0px auto 50px;
+  font-size: 14px;
+}
+
+.register-button:hover{
+text-decoration: underline;
+}

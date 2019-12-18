@@ -1,0 +1,40 @@
+
+@media only screen and (max-width: 1200px)and (min-width: 992px){
+  .sign-in-page{
+    position: static;
+  }
+.sign-in-panel{
+
+  //margin: 100px 0px 100px ;
+}
+  .share-the-moment{
+    padding: 0px;
+    //height: 100%;
+  }
+  .share-moment-img{
+
+    //margin:100px 0px 100px ;
+    max-width: 600px;
+    padding: 0px;
+
+  }
+}
+
+@media only screen and (max-width: 992px) {
+
+  .sign-in-page{
+    background: #f7f6fc;
+    justify-content: center;
+  }
+  .sign-in-panel{
+    margin: 100px 0px 100px;
+  }
+.share-the-moment{
+  display:none;
+}
+
+}
+
+
+
+
