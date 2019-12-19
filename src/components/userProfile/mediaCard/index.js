@@ -1,7 +1,6 @@
 import React from "react";
 import "./mediaCard.scss";
 import "./mediaBtns.scss"
-import "./hover.js"
 import Icon from "../../sharedComponents/Icon/index"
 
 class MediaCard extends React.Component {

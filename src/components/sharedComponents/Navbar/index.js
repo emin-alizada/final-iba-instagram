@@ -1,20 +1,24 @@
 import React, {Component} from 'react';
 import Icon from "../Icon";
-import "./css/navbar.scss"
+import "./css/navbar.scss";
+import {Link} from "react-router-dom";
 
 class Navbar extends Component {
     render() {
         return (
             <div className={"navbar"}>
                 <div className={"my-container"}>
-                    <Icon name = {"logo"}/>
-
+                    <Link to="/feed">
+                        <Icon name = {"logo"}/>
+                    </Link>
                     <div className="navbar-right">
                         <div className="search">
                             <Icon name={"search"} />
                             <input type="text" placeholder={"Search"} className={"search-field"}/>
                         </div>
-                        <Icon name={ "profile"}/>
+                        <Link to="/profile">
+                            <Icon name={ "profile"}/>
+                        </Link>
                     </div>
                 </div>
             </div>
