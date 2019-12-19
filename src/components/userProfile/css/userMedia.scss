@@ -1,0 +1,10 @@
+.userMediaContainer {
+    width: 70%;
+    height: 800px;
+    box-sizing: border-box;
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-evenly; 
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
