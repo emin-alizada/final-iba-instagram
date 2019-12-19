@@ -15,6 +15,7 @@ import settings from "./img/settings.png"
 import sharePost from "./img/sharePost.png"
 import subscriptionNotification from "./img/subscriptionNotification.png"
 import usernameLogIn from "./img/usernameLogIn.png"
+import styled from 'styled-components';
 
 class Icon extends Component {
     render() {
@@ -27,12 +28,12 @@ class Icon extends Component {
             {
                 type: "commentPost",
                 url: commentPost,
-                classes: ""
+                classes: "mediaCard_btnIcon"
             },
             {
                 type: "likeNotification",
                 url: likeNotification,
-                classes: ""
+                classes: "mediaCard_btnIcon"
             },
             {
                 type: "likePost",
