@@ -6,11 +6,13 @@ import "./css/centerContainer.scss";
 import "./css/userInfo.scss";
 import "./css/userMedia.scss";
 import MediaCard from "./mediaCard/index"
+import PostComment from "../sharedComponents/postComment";
 
 class UserProfile extends React.Component {
     render() {
         return (
             <div className={"pageContainer"}>
+                {/*<PostComment  />*/}
                 <div className={"userProfileContainer"}>
                     <div className={"wallpaper"}></div>
                     <div className={"centerContainer"}>
