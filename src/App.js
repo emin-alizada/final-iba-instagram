@@ -12,8 +12,10 @@ function App() {
 
   return (
     <div className="App">
-        <Navbar/>
+
+        {/*<Navbar/>*/}
         <SignInPage/>
+        {/*<UserProfile/>*/}
         {/*<MainFeed/>*/}
 
 

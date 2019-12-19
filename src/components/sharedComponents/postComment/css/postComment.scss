@@ -2,16 +2,11 @@
   background-color:rgba(112,112,112,0.3);
   display: flex;
   justify-content: center;
-  //width: 100%;
-  //height: 100%;
-  position: absolute;
-  //top: 100px;
-  //bottom: 0;
-  //right: 0;
-  //left: 0;
+font-family: sans-serif;
   width: 100%;
   height: 100%;
-
+  z-index: 2;
+position: fixed;
 }
 
 .post-comment-window{
