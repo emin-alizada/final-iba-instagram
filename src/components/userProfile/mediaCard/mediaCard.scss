@@ -1,0 +1,32 @@
+.mediaCard {
+    align-self: flex-start;
+    background-color: #ffffff;
+
+    &_photo {
+        width: 250px;
+        display: block;
+    }
+
+    &_btnContainer {
+        display: flex;
+        align-items: center;
+    }
+
+    &_btnIcon {
+        width: 20px;
+        margin: 6px;
+        margin-left: 0px;
+    }
+
+    &_btn {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &_counter {
+        font-size: 15px;
+        color: #3f3f3f;
+    }
+}
