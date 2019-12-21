@@ -1,15 +1,15 @@
 .settings-page {
-  background-color:rgba(112,112,112,0.3);
-position: fixed;
+  background-color: rgba(112, 112, 112, 0.3);
+  position: fixed;
   width: 100%;
   height: 100%;
-display: flex;
+  display: flex;
   justify-content: center;
 }
 
-.settings-window{
+.settings-window {
   background-color: white;
-display: flex;
+  display: flex;
   flex-direction: column;
   align-self: center;
   padding: 40px 230px 40px 180px;
@@ -18,10 +18,11 @@ display: flex;
 
 }
 
-.avatar{
+.avatar {
   display: flex;
 }
-.change-photo-button{
+
+.change-photo-button {
   align-self: center;
   padding: 10px;
   margin-left: 30px;
@@ -34,42 +35,46 @@ display: flex;
 
 }
 
-.settings-username{
-  font-size: 25px;
+.settings-username {
+  font-size: 30px;
   font-weight: bold;
   padding: 30px 0px;
-  color: #4d4d4d ;
-}
-.settings-form{
-  display: flex;
-  flex-direction: column;
-justify-content: space-evenly;
+  color: #4d4d4d;
+  text-align: center;
+  margin-left: 50px;
 }
 
-.personal-info{
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.personal-info {
   display: flex;
   flex-direction: column;
   margin-bottom: 80px;
   align-items: center;
 }
 
-.change-contact-info{
+.change-contact-info {
   display: flex;
   flex-direction: column;
   margin-bottom: 80px;
 
 }
-.change-password{
+
+.change-password {
   display: flex;
   flex-direction: column;
 }
 
-.gender-select-holder select{
-  padding: 8px!important;
-width: 300px;
+.gender-select-holder select {
+  padding: 8px !important;
+  width: 300px;
 }
 
-.settings-labels{
+.settings-labels {
   display: flex;
   justify-content: space-between;
   text-align: right;
@@ -78,42 +83,41 @@ width: 300px;
   font-weight: bold;
 }
 
-.personal-info-fields , .contact-info-fields , .change-password-fields{
+.personal-info-fields, .contact-info-fields, .change-password-fields {
   width: 300px;
-  margin:0px 0px 15px 30px;
+  margin: 0px 0px 15px 30px;
   align-self: center;
   padding: 8px;
-  border:none;
+  border: none;
   background-color: #f1f1f1;
   border-radius: 10px;
   font-size: 18px;
 }
 
-.change-settings-buttons{
+.change-settings-buttons {
   justify-content: space-around;
-flex-direction: row;
+  flex-direction: row;
   align-self: flex-end;
   margin-top: 20px;
 }
 
-.cancel-btn{
+.cancel-btn {
   padding: 10px 12px;
-  border:none;
+  border: none;
   background-color: #e6e6e6;
   border-radius: 10px;
   color: #9d9d9d;
   font-size: 20px;
 }
-.save-btn{
+
+.save-btn {
   margin-left: 20px;
   padding: 10px 12px;
   background-color: #46d0d5;
   color: white;
-  border:none;
+  border: none;
   border-radius: 10px;
   font-size: 20px;
-
-
 
 
 }

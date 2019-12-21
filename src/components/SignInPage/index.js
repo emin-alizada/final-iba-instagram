@@ -19,7 +19,7 @@ class SignInPage extends React.Component {
                 <RegisterPanel/>
                 <ShareTheMoment/>
                 {/*<PostComment/>*/}
-<SettingPage/>
+                <SettingPage/>
 
             </div>
         );

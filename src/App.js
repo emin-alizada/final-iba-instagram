@@ -12,17 +12,17 @@ import SettingPage from "./components/settingsPage";
 
 function App() {
 
-  return (
-    <div className="App">
-{/*<SharePost/>*/}
-        <Navbar/>
-        <SignInPage/>
-        {/*<UserProfile/>*/}
-        {/*<MainFeed/>*/}
-{/*<SettingPage/>*/}
+    return (
+        <div className="App">
+            {/*<SharePost/>*/}
+            <Navbar/>
+            <SignInPage/>
+            {/*<UserProfile/>*/}
+            {/*<MainFeed/>*/}
+            {/*<SettingPage/>*/}
 
-    </div>
-  );
+        </div>
+    );
 }
 
 export default App;
