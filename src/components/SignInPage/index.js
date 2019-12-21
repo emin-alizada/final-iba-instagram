@@ -14,7 +14,7 @@ class SignInPage extends React.Component {
     render() {
         return (
             <div className={"sign-in-page"}>
-                {/*<Navbar/>*/}
+                <Navbar/>
                 {/*<SignInPanel/>*/}
                 <RegisterPanel/>
                 <ShareTheMoment/>

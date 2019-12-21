@@ -43,7 +43,7 @@ class Icon extends Component {
             {
                 type: "logo",
                 url: logo,
-                classes: "logo"
+                classes: "elementContainer_logo"
             },
             {
                 type: "options",
@@ -58,7 +58,7 @@ class Icon extends Component {
             {
                 type: "profile",
                 url: profile,
-                classes: "profile-logo"
+                classes: "leftMenu_profileIcon"
             },
             {
                 type: "save",
@@ -68,12 +68,12 @@ class Icon extends Component {
             {
                 type: "search",
                 url: search,
-                classes: "search-icon"
+                classes: "leftMenu_searchIcon"
             },
             {
                 type: "settings",
                 url: settings,
-                classes: ""
+                classes: "userInfoContainer_setting_icon"
             },
             {
                 type: "sharePost",

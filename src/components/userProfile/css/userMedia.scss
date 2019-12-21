@@ -1,10 +1,15 @@
 .userMediaContainer {
     width: 70%;
-    height: 800px;
+    height: 700px;
     box-sizing: border-box;
-    padding: 50px 0;
+    margin-top: 50px;
+    padding: 30px 0 50px 0;
     display: flex;
-    justify-content: space-evenly; 
+    justify-content: space-evenly;
     flex-wrap: wrap;
     overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
