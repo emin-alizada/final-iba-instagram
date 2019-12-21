@@ -6,6 +6,7 @@ import './css/SiginPage-media.scss'
 import PostComment from "../sharedComponents/postComment";
 import RegisterPanel from "./RegisterPanel";
 import Navbar from "../sharedComponents/Navbar";
+import SettingPage from "../settingsPage";
 
 import {
     BrowserRouter as Router,
@@ -19,7 +20,6 @@ import {
 
 class SignInPage extends React.Component {
     render() {
-        // let {path , url} = useRouteMatch();
         return (
             <div className={"sign-in-page"}>
                 <Navbar/>
