@@ -1,8 +1,75 @@
+$font-color: rgba(74, 74, 74, 255);
+
 .userInfoContainer {
     width: 30%;
-    height: 500px;
     border-radius: 40px;
     background-color: #ffffff;
     position: relative;
-    top: -200px;
+    top: -220px;
+
+
+    &_setting::after {
+        content: '';
+        clear: both;
+        display: block;
+    }
+
+    &_setting_icon {
+        width: 25px;
+        margin: 20px 30px 0 0;
+        float: right;
+        cursor: pointer;
+    }
+
+    &_setting_icon:hover {
+        transform: rotate(20deg);
+    }
+
+    &_userInfo {
+        display: inline-block;
+        margin: 50px calc((100% - 190px) / 2);
+        margin-bottom: 0;
+    }
+
+    &_nickname {
+        margin: 15px 0;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        color: $font-color;
+    }
+
+    &_bio {
+        font-size: 17px;
+        margin-left: 12px;
+        color: $font-color;
+    }
+}
+
+
+
+.followInfoContainer {
+    margin-top: 15px;
+    padding: 20px 0 80px 0;
+    border-top: 1px solid lightgray;
+    display: flex;
+
+    &_followInfo {
+        width: calc(76% / 2);
+    }
+
+    &_followInfo:first-child {
+        width: 24%;
+    }
+}
+
+.followInfo_text, .followInfo_counter {
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.followInfo_text {
+    margin-bottom: 8px;
+    color: rgba(174, 174, 174, 255);
 }

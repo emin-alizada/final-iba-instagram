@@ -7,22 +7,17 @@ import MainFeed from "./components/MainFeed";
 import PostComment from "./components/sharedComponents/postComment";
 import Navbar from "./components/sharedComponents/Navbar";
 import UserProfile from "./components/userProfile/index"
-import SharePost from "./components/sharedComponents/sharePost";
-import SettingPage from "./components/settingsPage";
+
 
 function App() {
 
-    return (
-        <div className="App">
-            {/*<SharePost/>*/}
-            <Navbar/>
-            <SignInPage/>
-            {/*<UserProfile/>*/}
-            {/*<MainFeed/>*/}
-            {/*<SettingPage/>*/}
-
-        </div>
-    );
+  return (
+    <div className="App">
+        {/* <UserProfile/> */}
+        {/* <SignInPage/> */}
+        <MainFeed/>
+    </div>
+  );
 }
 
 export default App;
