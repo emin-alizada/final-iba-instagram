@@ -1,7 +1,6 @@
 import React from 'react';
 import "./resetCSS/reset.scss"
 import './App.scss';
-import Icon from "./components/sharedComponents/Icon";
 import SignInPage from "./components/SignInPage";
 import MainFeed from "./components/MainFeed";
 import UserProfile from "./components/userProfile";
@@ -12,8 +11,6 @@ import {
     Route,
     Link,
     Redirect,
-    useRouteMatch,
-    useParams
 } from "react-router-dom";
 
 function App() {
@@ -26,18 +23,11 @@ function App() {
         <Router>
             <Switch>
                 <Redirect exact from="/" to="/login" />
-                <Route  path="/feed">
-                    <MainFeed/>
-                </Route>
-                <Route  path="/login">
-                    <SignInPage/>
-                </Route>
-                <Route  path="/profile">
-                    <UserProfile/>
-                </Route>
+                <Route  path="/feed" component={MainFeed} />
+                <Route  path="/login" component={SignInPage}/>
+                <Route  path="/profile" component={UserProfile}/>
             </Switch>
         </Router>
-
     </div>
   );
 }

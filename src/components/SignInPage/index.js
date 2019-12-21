@@ -20,16 +20,13 @@ import {
 
 class SignInPage extends React.Component {
     render() {
+        console.log("Sign in page", this.props);
         return (
             <div className={"sign-in-page"}>
                 <Navbar/>
                 <Switch>
-                    <Route exact path={`/login`}>
-                        <SignInPanel/>
-                    </Route>
-                    <Route exact path={`/login/signup`}>
-                        <RegisterPanel/>
-                    </Route>
+                    <Route exact path={`/login`} component={SignInPanel}/>
+                    <Route exact path={`/login/signup`} component={RegisterPanel}/>
                 </Switch>
                 <ShareTheMoment/>
                 {/*<PostComment/>*/}
