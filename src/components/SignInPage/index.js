@@ -8,19 +8,28 @@ import RegisterPanel from "./RegisterPanel";
 import Navbar from "../sharedComponents/Navbar";
 import SettingPage from "../settingsPage";
 
-
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    Redirect,
+    useRouteMatch,
+    useParams
+} from "react-router-dom";
 
 class SignInPage extends React.Component {
     render() {
+        console.log("Sign in page", this.props);
         return (
             <div className={"sign-in-page"}>
                 <Navbar/>
-                {/*<SignInPanel/>*/}
-                <RegisterPanel/>
+                <Switch>
+                    <Route exact path={`/login`} component={SignInPanel}/>
+                    <Route exact path={`/login/signup`} component={RegisterPanel}/>
+                </Switch>
                 <ShareTheMoment/>
                 {/*<PostComment/>*/}
-<SettingPage/>
-
             </div>
         );
     }

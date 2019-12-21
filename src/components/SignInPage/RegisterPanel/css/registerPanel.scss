@@ -93,7 +93,7 @@ select{
   font-size: 20px;
   text-transform: uppercase;
   color: #46d0d6;
-  margin: 40px 0px;
+  margin: 40px 0 0 0;
 }
 .signup-button:hover{
 
@@ -103,7 +103,24 @@ select{
 
 }
 
+.or{
+  padding: 15px 0px;
+  font-size: 15px;
+  color: #b3b3b3;
 
+}
+
+.log-in-button{
+  text-transform: uppercase;
+  color: #5fd6db;
+  font-family: inherit;
+  margin:0px auto 50px;
+  font-size: 14px;
+}
+
+.log-in-button:hover{
+  text-decoration: underline;
+}
 
 
 

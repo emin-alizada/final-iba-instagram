@@ -57,7 +57,11 @@ class SettingPage extends React.Component{
                             </label>
                         </fieldset>
                         <fieldset className="change-settings-buttons">
-                            <button className={"cancel-btn"}>Cancel</button>
+                            <button onClick={(event) => {
+                                event.preventDefault();
+                                console.log("go back");
+                                this.props.history.goBack();
+                            }} className={"cancel-btn"}>Cancel</button>
                             <input type="submit" className={"save-btn"}/>
                         </fieldset>
                     </form>
@@ -66,5 +70,7 @@ class SettingPage extends React.Component{
         );
     }
 }
+
+
 
 export default SettingPage;

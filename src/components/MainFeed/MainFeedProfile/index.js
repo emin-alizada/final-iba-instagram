@@ -2,9 +2,20 @@ import React, {Component} from 'react';
 import "./mainFeedProfile.scss"
 import Icon from "../../sharedComponents/Icon";
 
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    Redirect,
+    useRouteMatch,
+    useParams
+} from "react-router-dom";
+import SettingPage from "../../settingsPage";
+
 class MainFeedProfile extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             isLoaded: false,
             user: {},
@@ -30,7 +41,11 @@ class MainFeedProfile extends Component {
     render() {
         return (
             <div className={"main-feed-profile"}>
-                <div className={"main-feed-profile-settings"}><Icon name={"settings"}/></div>
+                <div className={"main-feed-profile-settings"}>
+                    <Link to={`/feed/settings`}>
+                        <Icon name={"settings"}/>
+                    </Link>
+                </div>
                 <img src={this.state.user.profile_photo} className={"main-feed-profile-photo"} alt=""/>
                 <h3 className={"main-feed-profile-username"}>{this.state.user.username}</h3>
                 <div className={"main-feed-profile-info"}>
