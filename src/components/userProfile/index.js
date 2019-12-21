@@ -10,11 +10,13 @@ import Icon from "../sharedComponents/Icon";
 import Navbar from "../sharedComponents/Navbar/index"
 import ProfilePhoto from "../sharedComponents/profilePhoto/index";
 
+
 class UserProfile extends React.Component {
     render() {
         return (
             <div className={"pageContainer"}>
                 <Navbar/>
+
                 <div className={"userProfileContainer"}>
                     <div className={"wallpaper"}></div>
                     <div className={"centerContainer"}>

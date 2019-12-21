@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Icon from "../Icon";
-// import "./css/navbar.scss"
 import "./css/customNavbar.scss"
 
 class Navbar extends Component {
