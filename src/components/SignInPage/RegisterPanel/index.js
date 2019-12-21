@@ -26,7 +26,7 @@ class RegisterPanel extends React.Component{
                             </select>
 
                             <input type="password" placeholder={"Password"} className={"fields"} />
-                            <input type="password" placeholder={"Confirm-password"} className={"fields"} />
+                            <input type="password" placeholder={"Confirm password"} className={"fields"} />
 
                             <input type="submit" value={"Sign Up"} className={"signup-button"} />
 

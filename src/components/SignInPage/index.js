@@ -6,6 +6,7 @@ import './css/SiginPage-media.scss'
 import PostComment from "../sharedComponents/postComment";
 import RegisterPanel from "./RegisterPanel";
 import Navbar from "../sharedComponents/Navbar";
+import SettingPage from "../settingsPage";
 
 
 
@@ -13,12 +14,12 @@ class SignInPage extends React.Component {
     render() {
         return (
             <div className={"sign-in-page"}>
-                <Navbar/>
+                {/*<Navbar/>*/}
                 {/*<SignInPanel/>*/}
                 <RegisterPanel/>
                 <ShareTheMoment/>
                 {/*<PostComment/>*/}
-
+<SettingPage/>
 
             </div>
         );
