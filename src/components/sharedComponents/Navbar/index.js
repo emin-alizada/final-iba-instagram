@@ -1,20 +1,20 @@
 import React, {Component} from 'react';
 import Icon from "../Icon";
-import "./css/navbar.scss"
+// import "./css/navbar.scss"
+import "./css/customNavbar.scss"
 
 class Navbar extends Component {
     render() {
         return (
             <div className={"navbar"}>
-                <div className={"my-container"}>
-                    <Icon name = {"logo"}/>
-
-                    <div className="navbar-right">
-                        <div className="search">
-                            <Icon name={"search"} />
-                            <input type="text" placeholder={"Search"} className={"search-field"}/>
+                <div className={"elementContainer"}>
+                    <Icon name={"logo"} className={"elementContainer_logo"}/>
+                    <div className={"leftMenu"}>
+                        <div className={"leftMenu_searchContainer"}>
+                            <Icon name={"search"} className={"leftMenu_searchIcon"}/>
+                            <input type="text" className={"leftMenu_searchInput"} placeholder="search"/>
                         </div>
-                        <Icon name={ "profile"}/>
+                        <Icon name={"profile"} className={"leftMenu_profileIcon"}/>
                     </div>
                 </div>
             </div>
