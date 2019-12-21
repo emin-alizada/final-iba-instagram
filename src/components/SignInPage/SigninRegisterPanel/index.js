@@ -1,6 +1,17 @@
 import React from "react";
 import Icon from "../../sharedComponents/Icon";
 import './css/sginInPanel.scss'
+
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    Redirect,
+    useRouteMatch,
+    useParams
+} from "react-router-dom";
+
 class SignInPanel extends React.Component {
     render() {
         return (
@@ -21,8 +32,9 @@ class SignInPanel extends React.Component {
                         </div>
                         <input type="submit" value={"Log In"} className={"login-button"} />
                         <p className={"or"}>or</p>
-                        <a href="#" className={"register-button"}> Sign Up </a>
-
+                        <Link to="/login/signup">
+                            <a href="#" className={"register-button"}> Sign Up </a>
+                        </Link>
                     </form>
 
                 </div>
