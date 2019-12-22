@@ -17,6 +17,7 @@ function App() {
 
   return (
     <div className="App">
+
         {/*{isGuest && {*/}
 
         {/*}}*/}
@@ -28,6 +29,7 @@ function App() {
                 <Route  path="/profile" component={UserProfile}/>
             </Switch>
         </Router>
+
     </div>
   );
 }

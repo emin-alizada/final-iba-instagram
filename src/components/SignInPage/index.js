@@ -30,6 +30,7 @@ class SignInPage extends React.Component {
                 </Switch>
                 <ShareTheMoment/>
                 {/*<PostComment/>*/}
+
             </div>
         );
     }
