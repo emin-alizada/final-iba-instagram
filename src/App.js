@@ -12,6 +12,10 @@ import {
     Link,
     Redirect,
 } from "react-router-dom";
+import PostComment from "./components/sharedComponents/postComment";
+import SearcResults from "./components/sharedComponents/searchResults";
+import SettingPage from "./components/settingsPage";
+import SharePost from "./components/sharedComponents/sharePost";
 
 function App() {
 
@@ -19,16 +23,15 @@ function App() {
     <div className="App">
 
         {/*{isGuest && {*/}
-
         {/*}}*/}
-        <Router>
-            <Switch>
-                <Redirect exact from="/" to="/login" />
-                <Route  path="/feed" component={MainFeed} />
-                <Route  path="/login" component={SignInPage}/>
-                <Route  path="/profile" component={UserProfile}/>
-            </Switch>
-        </Router>
+        {/*<Router>*/}
+        {/*    <Switch>*/}
+        {/*        <Redirect exact from="/" to="/login" />*/}
+        {/*        <Route  path="/feed" component={MainFeed} />*/}
+        {/*        <Route  path="/login" component={SignInPage}/>*/}
+        {/*        <Route  path="/profile" component={UserProfile}/>*/}
+        {/*    </Switch>*/}
+        {/*</Router>*/}
 
     </div>
   );
