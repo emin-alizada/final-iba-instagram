@@ -9,6 +9,8 @@ import MediaCard from "./mediaCard/index"
 import Icon from "../sharedComponents/Icon";
 import Navbar from "../sharedComponents/Navbar/index"
 import ProfilePhoto from "../sharedComponents/profilePhoto/index";
+import ShareBtn from '../sharedComponents/sharePostBTN/index'
+import SearcResults from "../sharedComponents/searchResults";
 
 
 class UserProfile extends React.Component {
@@ -16,7 +18,7 @@ class UserProfile extends React.Component {
         return (
             <div className={"pageContainer"}>
                 <Navbar/>
-
+<SearcResults/>
                 <div className={"userProfileContainer"}>
                     <div className={"wallpaper"}></div>
                     <div className={"centerContainer"}>
@@ -70,6 +72,7 @@ class UserProfile extends React.Component {
                             <MediaCard/>
                         </div>
                     </div>
+                    <ShareBtn/>
                 </div>
             </div>
         );

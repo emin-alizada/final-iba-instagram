@@ -1,0 +1,34 @@
+.single-search-result{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.search-result:last-child{
+  margin-bottom: 0;
+}
+
+.search-result-user{
+  display: flex;
+}
+
+.search-result-img {
+}
+
+.search-result-username{
+  align-self: center;
+  margin-left: 15px;
+  font-size: 20px;
+}
+
+.search-result-sub-btn{
+  align-self: center;
+  margin-left: 50px;
+  font-size: 20px;
+  padding:10px 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: #46d0d6;
+  color: white;
+}
+
+
