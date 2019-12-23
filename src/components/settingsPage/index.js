@@ -1,8 +1,13 @@
 import React from "react";
 import Icon from "../sharedComponents/Icon";
 import './css/settingsPage.scss'
+
+
+import {connect} from "react-redux"
+
 class SettingPage extends React.Component{
     render() {
+        console.log("user from settings",this.props.user);
         return (
             <div className={"settings-page"}>
                 <div className="settings-window">
@@ -71,6 +76,10 @@ class SettingPage extends React.Component{
     }
 }
 
+const mapStateToProps = store => {
+    return {
+        user: store.currentUser.user,
+    }
+};
 
-
-export default SettingPage;
+export default connect(mapStateToProps)(SettingPage);

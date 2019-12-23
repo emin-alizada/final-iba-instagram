@@ -15,6 +15,7 @@ import settings from "./img/settings.png"
 import sharePost from "./img/sharePost.png"
 import subscriptionNotification from "./img/subscriptionNotification.png"
 import usernameLogIn from "./img/usernameLogIn.png"
+import newPost from "./img/newPost.png"
 import styled from 'styled-components';
 
 class Icon extends Component {
@@ -89,6 +90,11 @@ class Icon extends Component {
                 type: "usernameLogIn",
                 url: usernameLogIn,
                 classes: "username-icon"
+            },
+            {
+                type: "newPost",
+                url: newPost,
+                classes: ""
             },
         ];
         const icon = icons.find(icon =>{

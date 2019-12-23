@@ -11,6 +11,7 @@ import Navbar from "../sharedComponents/Navbar/index"
 import ProfilePhoto from "../sharedComponents/profilePhoto/index";
 import UserProfileCard from "../sharedComponents/UserProfileCard";
 import SettingPage from "../settingsPage";
+
 import {
     BrowserRouter as Router,
     Switch,
@@ -19,46 +20,64 @@ import {
     Redirect,
 } from "react-router-dom";
 
+import {connect} from "react-redux"
+import Preloader from "../sharedComponents/Proloader";
+
+
 class UserProfile extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            currentUserPosts: [],
+            isLoaded: false,
+        }
+    }
+
+    componentDidMount() {
+        const fetchData = async () => {
+            await fetch(`https://fp-instagram.herokuapp.com/users/${this.props.user.id}/posts`)
+                .then(result => result.json())
+                .then( async posts => {
+                    this.setState({
+                        isLoaded: true,
+                        currentUserPosts: posts,
+                    });
+                });
+        };
+        fetchData();
+    }
+
     render() {
         return (
             <div className={"pageContainer"}>
                 <Navbar/>
                 <Route path={`/profile/settings`} component={SettingPage}/>
-                <div className={"userProfileContainer"}>
-                    <div className={"wallpaper"}></div>
-                    <div className={"centerContainer"}>
-                       <UserProfileCard/>
-                        <div className={"userMediaContainer"}>
-                            <MediaCard/>
-                            <MediaCard/>
-                            <MediaCard/>
+                {this.state.isLoaded ?
+                    <div className={"userProfileContainer"}>
+                        <div className={"wallpaper"}></div>
+                        <div className={"centerContainer"}>
+                            <UserProfileCard/>
+                            <div className={"userMediaContainer"}>
+                                {this.state.currentUserPosts.map( post => (
+                                    <MediaCard key={post.id} image_url={post.image_url}  like_counter={post.like_counter} comments_counter={post.comments_counter} />
+                                ))}
 
-                            <MediaCard/>
-                            <MediaCard/>
-                            <MediaCard/>
-
-                            <MediaCard/>
-                            <MediaCard/>
-                            <MediaCard/>
-
-                            <MediaCard/>
-                            <MediaCard/>
-                            <MediaCard/>
-
-                            <MediaCard/>
-                            <MediaCard/>
-                            <MediaCard/>
-
-                            <MediaCard/>
-                            <MediaCard/>
-                            <MediaCard/>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    :<Preloader/>
+                }
+                {console.log(this.state.currentUserPosts)}
             </div>
         );
     }
 }
 
-export default UserProfile;
+const mapStateToProps = store => {
+    return {
+        user: store.currentUser.user,
+    }
+};
+
+
+export default connect(mapStateToProps)(UserProfile);
