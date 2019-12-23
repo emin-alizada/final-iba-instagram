@@ -14,7 +14,7 @@ class SettingPage extends React.Component{
             <div className={"settings-page"}>
                 <div className="settings-window">
                     <div className="avatar">
-                        <img src={require("../sharedComponents/postComment/img/laura-comment.png")} alt=""/>
+                        <img src={require("../sharedComponents/postComment/img/laura-comment.png")} alt="" className={"setting-page-avatar"}/>
                         <button className="change-photo-button">Change Profile Picture</button>
                     </div>
                     <div className="settings-username">anna_white</div>
