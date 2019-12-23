@@ -13,9 +13,9 @@ function App() {
 
   return (
     <div className="App">
-        {/* <UserProfile/> */}
+        <UserProfile/>
         {/* <SignInPage/> */}
-        <MainFeed/>
+        {/* <MainFeed/> */}
     </div>
   );
 }

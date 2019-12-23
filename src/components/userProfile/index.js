@@ -16,7 +16,6 @@ class UserProfile extends React.Component {
         return (
             <div className={"pageContainer"}>
                 <Navbar/>
-
                 <div className={"userProfileContainer"}>
                     <div className={"wallpaper"}></div>
                     <div className={"centerContainer"}>

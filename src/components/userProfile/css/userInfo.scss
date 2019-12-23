@@ -55,11 +55,7 @@ $font-color: rgba(74, 74, 74, 255);
     display: flex;
 
     &_followInfo {
-        width: calc(76% / 2);
-    }
-
-    &_followInfo:first-child {
-        width: 24%;
+        margin: 0 7px;
     }
 }
 
@@ -72,4 +68,63 @@ $font-color: rgba(74, 74, 74, 255);
 .followInfo_text {
     margin-bottom: 8px;
     color: rgba(174, 174, 174, 255);
+}
+
+
+@media screen and (max-width: 1279px) {
+
+    .userInfoContainer {
+        width: 100%;
+        margin-top: 20px;
+        padding: 20px;
+        position: unset;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        box-sizing: border-box;
+    
+        &_setting_icon {
+            margin: 0;
+            width: 15px;
+        }
+
+        &_userInfo {
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+        }
+
+        &_bio {
+            display: none;
+        }
+
+        &_nickname {
+            margin: 0 30px;
+        }
+    }
+
+    .followInfoContainer {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+}
+
+
+@media screen and (max-width: 565px) {
+
+    .userInfoContainer {
+
+        &_nickname {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+
+    .userInfoContainer {
+        padding: 20px 5px;
+    }
 }

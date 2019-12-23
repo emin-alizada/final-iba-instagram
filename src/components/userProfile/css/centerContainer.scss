@@ -1,5 +1,11 @@
 .centerContainer {
     display: flex;
-    position: relative;
     align-items: flex-start;
+}
+
+@media screen and (max-width: 1279px) {
+    
+    .centerContainer {
+        flex-direction: column;
+    }
 }
