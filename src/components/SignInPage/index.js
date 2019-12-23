@@ -20,7 +20,6 @@ import {
 
 class SignInPage extends React.Component {
     render() {
-        console.log("Sign in page", this.props);
         return (
             <div className={"sign-in-page"}>
                 <Navbar/>

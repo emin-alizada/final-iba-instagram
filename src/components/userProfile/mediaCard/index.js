@@ -7,15 +7,15 @@ class MediaCard extends React.Component {
     render() {
         return (
             <div className={"mediaCard"}>
-                <img src={require("../img/profilePhoto1.png")} className={"mediaCard_photo"}/>
+                <img src={this.props.image_url} className={"mediaCard_photo"}/>
                 <div className={"mediaCard_btnContainer"}>
                     <div className={"mediaCard_btn"}>
                         <Icon name = {"likeNotification"}/>
-                        <span className={"mediaCard_counter"}>109</span>
+                        <span className={"mediaCard_counter"}>{this.props.like_counter}</span>
                     </div>
                     <div className={"mediaCard_btn"}>
                         <Icon name = {"commentPost"}/>
-                        <span className={"mediaCard_counter"}>34</span>
+                        <span className={"mediaCard_counter"}>{this.props.comments_counter}</span>
                     </div>
                 </div>
             </div>
