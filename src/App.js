@@ -12,7 +12,10 @@ import {
     Link,
     Redirect,
 } from "react-router-dom";
-
+import PostComment from "./components/sharedComponents/postComment";
+import SearcResults from "./components/sharedComponents/searchResults";
+import SettingPage from "./components/settingsPage";
+import SharePost from "./components/sharedComponents/sharePost";
 
 import {connect} from "react-redux"
 

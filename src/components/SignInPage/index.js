@@ -22,7 +22,6 @@ class SignInPage extends React.Component {
     render() {
         return (
             <div className={"sign-in-page"}>
-                <Navbar/>
                 <Switch>
                     <Route exact path={`/login`} component={SignInPanel}/>
                     <Route exact path={`/login/signup`} component={RegisterPanel}/>
