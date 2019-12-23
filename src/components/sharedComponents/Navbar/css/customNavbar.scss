@@ -50,6 +50,7 @@
 
     &_profileIcon {
         width: 20px;
+        margin-right: 10px;
         margin-left: 30px;
         cursor: pointer;
     }
@@ -70,11 +71,6 @@
         &_logo {
             width: 30px;
         }
-    }
-
-    .leftMenu {
-        width: 55%;
-        justify-content: space-between;
     }
 }
 
