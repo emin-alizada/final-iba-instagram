@@ -8,16 +8,63 @@
 
 .userProfileCardContainer {
   width: 30%;
-  height: 500px;
-  border: 0.5px solid black;
-}
+  height: 355px;
+  border: 1px solid lightgray;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 30px;
 
-.userProfileCard {
-  height: 70%;
-  background-color: red;
-  position: fixed;
-}
+  &_settingContainer {
+    width: 100%;
+    overflow: hidden;
+  }
 
+  &_userInfo {
+    margin: 20px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &_profilePhoto {
+    width: 150px;
+    border-radius: 20px;
+  }
+
+  &_username {
+    font-size: 20px;
+    margin: 20px 0 30px;
+    text-align: center;
+    font-weight: bolder;
+  }
+
+  &_followContainer {
+    display: flex;
+  }
+
+  &_followInfo {
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &_followInfo:last-child {
+    margin: 0;
+  }
+
+  &_followCounter {
+    margin-top: 5px;
+    font-size: 15px;
+  }
+
+  &_followType {
+    color: gray;
+  }
+
+}
 
 @media screen and (max-width: 999px) {
  
