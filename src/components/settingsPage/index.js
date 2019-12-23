@@ -14,20 +14,20 @@ class SettingPage extends React.Component{
             <div className={"settings-page"}>
                 <div className="settings-window">
                     <div className="avatar">
-                        <img src={require("../sharedComponents/postComment/img/laura-comment.png")} alt=""/>
+                        <img src={this.props.user.profile_photo} alt=""/>
                         <button className="change-photo-button">Change Profile Picture</button>
                     </div>
-                    <div className="settings-username">anna_white</div>
+                    <div className="settings-username">{this.props.user.username}</div>
                     <form action="" className={"settings-form"}>
                         <fieldset className={"personal-info"}>
                             <label htmlFor="change-name" className={"settings-labels"}>Name
-                                <input id={"change-name"} type="text" className={"personal-info-fields"}/>
+                                <input id={"change-name"} type="text" className={"personal-info-fields"} value={this.props.user.name}/>
                             </label>
                             <label htmlFor="change-username" className={"settings-labels"}>Username
-                                <input id={"change-username"} type="text" className={"personal-info-fields"}/>
+                                <input id={"change-username"} type="text" className={"personal-info-fields"} value={this.props.user.username}/>
                             </label>
                             <label htmlFor="change-bio" className={"settings-labels"}>Bio
-                                <input id={"change-bio"} type="text" className={"personal-info-fields"}/>
+                                <input id={"change-bio"} type="text" className={"personal-info-fields"} value={this.props.user.description}/>
                             </label>
                             <label htmlFor="change-gender " className={"gender-select-holder settings-labels"}>Gender
                                 {/*<input id={"change-gender"} type="text" className={"personal-info-fields"}/>*/}
