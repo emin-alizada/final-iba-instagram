@@ -21,9 +21,10 @@ function App() {
 
   return (
     <div className="App">
-
+{/*<SignInPage/>*/}
         {/*{isGuest && {*/}
         {/*}}*/}
+        <SettingPage/>
         {/*<Router>*/}
         {/*    <Switch>*/}
         {/*        <Redirect exact from="/" to="/login" />*/}
