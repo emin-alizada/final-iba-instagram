@@ -78,7 +78,7 @@ class RegisterPanel extends React.Component {
 
             console.log(JSON.stringify(newUser));
 
-            await fetch("http://fp-instagram.herokuapp.com/users", {
+            await fetch("https://fp-instagram.herokuapp.com/users", {
                 headers: headers,
                 method: "POST",
                 body: JSON.stringify(newUser)

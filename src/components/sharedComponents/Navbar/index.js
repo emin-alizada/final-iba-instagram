@@ -13,8 +13,21 @@ class Navbar extends Component {
                     </Link>
                         <div className={"leftMenu"}>
                         <div className={"leftMenu_searchContainer"}>
-                            <Icon name={"search"} className={"leftMenu_searchIcon"}/>
-                            <input type="text" className={"leftMenu_searchInput"} placeholder="search"/>
+                            <form action="" onSubmit={ async (event) =>{
+                                event.preventDefault();
+                                // await fetch(`https://fp-instagram.herokuapp.com/search`,{
+                                //     headers: {
+                                //         "Content-Type": "application/json",
+                                //         "Accept": "application/json",
+                                //         "Origin": "http://localhost:3000"
+                                //     },
+                                //     method: "POST",
+                                //     body: JSON.stringify({content:`${event.target.querySelector("input")[0]}`})
+                                // })
+                            }}>
+                                <Icon name={"search"} className={"leftMenu_searchIcon"}/>
+                                <input type="text" className={"leftMenu_searchInput"} placeholder="search"/>
+                            </form>
                         </div>
                             <Link to="/profile">
                                 <Icon name={"profile"} className={"leftMenu_profileIcon"}/>

@@ -25,3 +25,13 @@ export const verifyUser = (logInUser) => {
         })
     }
 };
+
+export const updateUser = (userId) => {
+    return async dispatch => {
+        await fetch(`https://fp-instagram.herokuapp.com/users/${userId}`)
+            .then(result => result.json())
+            .then(user => {
+                dispatch({type: "fetchUpdateUserSuccess", payload: user})
+            })
+    }
+};
