@@ -1,7 +1,25 @@
 .wallpaper {
+    width: 100%;
     padding: 150px 0;
     background-image: url('../img/wallpaper.png');
     background-repeat: no-repeat;
     border-bottom-right-radius: 30px;
     background-position: -85px -150px;
+}
+
+@media screen and (max-width: 1279px) {
+    
+    .wallpaper {
+        padding: 100px;
+        border-bottom-left-radius: 30px;
+        background-position: -220px -150px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    
+    .wallpaper {
+        display: none;
+    }
 }

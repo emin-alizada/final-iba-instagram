@@ -31,7 +31,8 @@ class UserProfile extends React.Component {
             <div className={"pageContainer"}>
                 <Navbar/>
 
-<SearcResults/>
+
+            <SearcResults/>
 
                 <Route path={`/profile/settings`} component={SettingPage}/>
 

@@ -22,6 +22,11 @@ function App() {
   return (
     <div className="App">
 
+        <UserProfile/>
+        {/* <SignInPage/> */}
+        {/* <MainFeed/> */}
+
+
         {/*{isGuest && {*/}
         {/*}}*/}
         {/*<Router>*/}
