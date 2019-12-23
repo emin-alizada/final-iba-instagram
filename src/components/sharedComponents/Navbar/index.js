@@ -33,7 +33,7 @@ class Navbar extends Component {
                                 <Icon name={"profile"} className={"leftMenu_profileIcon"}/>
                             </Link>
                             <Link to={"/"}>
-                                <Icon name={"newPost"} />
+                                <Icon name={"newPost"}/>
                             </Link>
                     </div>
                 </div>

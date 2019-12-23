@@ -1,89 +1,148 @@
-.feed-post{
-  max-width: 804px;
-  margin-bottom: 100px;
+.feed {
+  width: 70%;
+  height: calc(100vh - 130px);
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  } 
+
+  &_card {
+    width: 500px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#ffffff;
+    padding: 20px;
+    border-top-right-radius: 45px;
+    border-top-left-radius: 45px;
+  }
+
+  &_header_container {
+    display: flex;
+    align-items: center;
+  }
+
+  &_userInfo {
+    margin-left: 10px;
+  }
+
+  &_postImage {
+    width: 100%;
+  }
+
+  &_postDate {
+    margin-top: 3px;
+    color: gray;
+    font-size: 14px;
+  }
+
+  &_profilePhoto {
+    width: 60px;
+    border-radius: 10px;
+  }
+
+  &_profilePhoto:hover {
+    cursor: pointer;
+  }
+
+  &_option {
+    width: 5px;
+  }
+
+  &_option:hover {
+    cursor: pointer;
+  }
+
+  &_iconContainer {
+    display: flex;
+  }
+
+  &_icon {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &_icon:hover {
+    cursor: pointer;
+  }
+
+  &_username:hover {
+    cursor: pointer;
+  }
+
+  &_footer {
+    padding: 0 60px;
+    background-color: #ffffff;
+    border-bottom-right-radius: 45px;
+    border-bottom-left-radius: 45px;
+  }
+
+  &_descriptionContainer {
+    display: flex;
+    margin-top: 20px;
+  }
+
+  &_descriptionUsername {
+    font-weight: bolder;
+    margin-right: 8px;
+  }
+
+  &_description {
+    margin-left: 10px
+  }
+
+  &_commentCounter {
+    margin-top: 6px;
+    color: lightgray;
+    font-size: 13px;
+    cursor: pointer;
+  }
+
+  &_inputComment {
+    width: 100%;
+    padding: 7px 10px;
+    border: 0;
+    border-radius: 10px;
+    outline: none;
+    color: gray;
+    background-color: #f1f1f1;
+  }
+
+  &_commentContainer {
+    display: flex;
+    margin: 10px 0 20px;
+  }
+
+  &_sendBtn {
+    border: 0;
+    border-radius: 10px;
+    margin-left: 5px;
+    outline: none;
+    font-size: 10px;
+    background-color: #f1f1f1;
+  }
 }
 
+@media screen and (max-width: 999px) {
 
-.feed-post-header{
-  display: flex;
-  align-items: center;
+  .feed {
+    width: 100%;
+  }
 }
 
-.feed-post-header-pp{
-  border-radius: 30%;
-  margin-right: 15px;
-  width: 64px;
-  height: 64px;
-}
-
-.feed-post-header-back{
-  margin-left: auto;
-  margin-right: 10px;
-}
-
-.feed-post-photo{
-  margin-bottom: 15px;
-}
-
-
-.feed-post-footer{
-  display: flex;
-}
-
-.feed-post-footer-icon{
-  width: calc(100%/3);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.feed-post-footer-icon:nth-child(2){
-  border-left: 1px solid #b3b3b3;
-  border-right: 1px solid #b3b3b3;
-}
-
-.feed-post-photo{
-  width: 804px;
-}
-
-.feed-post-header-text{
-  margin-right: auto;
-}
-
-.feed-post-comment-container{
-  margin-top: 30px;
-  padding: 0 70px;
-}
-
-.feed-post-comment{
-  display: flex;
-  margin-bottom: 15px;
-}
-
-.feed-post-comment-username{
-  color: #4d4d4d;
-  font-weight: bold;
-  font-size: 26px;
-  margin-right: 30px;
-}
-
-.feed-post-comment-itself{
-  color: #4d4d4d;
-  font-weight: lighter;
-  font-size: 26px;
-}
-
-.feed-post-comment-view-all{
-  font-size: 20px;
-  color: #ccc;
-  text-decoration: none;
-}
-
-.feed-post-comment-new-text{
-  width: 85%;
-
-}
-
-.feed-post-comment-new-submit{
-  width: 10%;
+@media screen and (max-width: 500px) {
+  
+  .feed_card {
+    width: 350px;
+  }
 }
