@@ -1,21 +1,30 @@
-.post-comment{
-  background-color:rgba(112,112,112,0.3);
+.post-comment {
+  background-color: rgba(112, 112, 112, 0.3);
   display: flex;
   justify-content: center;
-font-family: sans-serif;
-  width: 100%;
-  height: 100%;
+
+  font-family: sans-serif;
+  //width: 100%;
+  //height: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0 ;
   z-index: 2;
-position: fixed;
+  position: fixed;
 }
 
-.post-comment-window{
+.posted-img{
+  width: 900px;
+}
+
+.post-comment-window {
   display: flex;
-  transform: scale(0.7);
-
+  transform: scale(0.6);
+  align-self: center;
 }
 
-.comment-section{
+.comment-section {
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -24,8 +33,11 @@ position: fixed;
   border-top-right-radius: 50px;
 
 }
-
-.comment-section-top{
+//.blah-blah{
+//  width: 100%;
+//
+//}
+.comment-section-top {
   display: flex;
   justify-content: space-between;
   border-bottom: 2px solid #808080;
@@ -34,60 +46,71 @@ position: fixed;
   border-top-right-radius: 50px;
 
 }
-.comment-section-user{
+
+.comment-section-user {
   display: flex;
   justify-content: left;
   //margin-left: 40px;
 }
-.comment-section-user-img{
+
+.comment-section-user-img {
 
   margin-right: 12px;
 
 }
-.comment-section-username{
+
+.comment-section-username {
   align-self: center;
   font-size: 28px;
+  padding-right: 20px;
 
 }
-.options-button{
+
+.options-button {
   align-self: center;
 }
 
-.comment-section-middle{
+.comment-section-middle {
 
 }
-.posted-comments{
+
+.posted-comments {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-.post-comment-like-count{
-display: flex;
-padding: 0px 0px 20px 40px;
+  overflow: scroll;
+  height: 600px;
 }
 
-.like-count-icon{
+.post-comment-like-count {
+  display: flex;
+  padding: 20px 0px 20px 40px;
+}
+
+.like-count-icon {
   margin-right: 10px;
 }
-.count-number{
+
+.count-number {
   align-self: center;
   font-size: 25px;
 
 }
-.write-comment{
+
+.write-comment {
   background-color: #e6e6e6;
-  //padding: 0px 200px 0px 10px;
-display: flex;
-border-bottom-right-radius: 50px;
+  display: flex;
+  border-bottom-right-radius: 50px;
 }
 
-.write-comment-input{
-background-color: #e6e6e6;
+.write-comment-input {
+  background-color: #e6e6e6;
   border: none;
   padding: 40px 150px 30px 20px;
   width: 100%;
   font-size: 25px;
 }
+
 .send-comment-btn {
   display: inline-block;
   align-self: center;

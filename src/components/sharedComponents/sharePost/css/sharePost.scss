@@ -13,6 +13,7 @@
   background-color: white;
   border-radius: 50px;
   text-align: center;
+  align-self: center;
 }
 
 
@@ -21,17 +22,13 @@
   flex-direction: column;
 }
 
-.share-post-window{
-  align-self: center;
-  border: 20px solid hotpink;
-}
 
 .post-description{
   font-size: 20px;
   margin-bottom: 20px;
   border: 2px solid darkgray;
   border-radius: 10px;
-  padding: 5px 80px 5px 10px;
+  padding: 5px 50px 5px 10px;
 
 }
 
@@ -49,7 +46,7 @@
   margin-bottom: 20px;
   border: 2px solid darkgray;
   border-radius: 10px;
-  padding: 5px 80px 5px 10px;
+  padding: 5px 50px 5px 10px;
 
 
 

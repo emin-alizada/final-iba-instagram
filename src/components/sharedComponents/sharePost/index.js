@@ -1,6 +1,7 @@
 import React from "react";
 import "./css/sharePost.scss"
 import Icon from "../Icon";
+import './css/sharePost-media.scss'
 class SharePost extends React.Component{
     render() {
         return(

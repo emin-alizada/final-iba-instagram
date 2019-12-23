@@ -1,6 +1,7 @@
 import React from "react";
 import Icon from "../Icon";
 import './css/postComment.scss'
+import  './css/postComment-media.scss'
 import PostedComment from "./postedComment";
 class PostComment extends React.Component {
     render() {
@@ -9,7 +10,10 @@ class PostComment extends React.Component {
 
             <div className={"post-comment"}>
                 <div className={"post-comment-window"}>
-                    <img src={require("./img/post-comment-dog.png")} alt=""/>
+                    <img src={require("./img/post-comment-dog.png")} alt="" className={"posted-img"}/>
+                    {/*<div className={"blah-blah"}>*/}
+                    {/*    */}
+                    {/*</div>*/}
                     <div className={"comment-section"}>
  <div className="comments-and-user">
      <div className="comment-section-top">
@@ -24,6 +28,12 @@ class PostComment extends React.Component {
          <PostedComment/>
          <PostedComment/>
          <PostedComment/>
+         <PostedComment/>
+         <PostedComment/>
+         <PostedComment/>
+         <PostedComment/>
+         <PostedComment/>
+
          {/*<div className={"comment"}>*/}
          {/*    <img src={require("img/maria-comment.png")} alt="" className={"commenter-img"}/>*/}
          {/*    <div className={"comment-details"}>*/}

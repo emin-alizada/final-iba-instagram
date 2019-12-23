@@ -1,6 +1,8 @@
 import React from "react";
 import Icon from "../sharedComponents/Icon";
 import './css/settingsPage.scss'
+import './css/settingsPage-media.scss'
+import ShareBtn from "../sharedComponents/sharePostBTN";
 class SettingPage extends React.Component{
     render() {
         return (
@@ -52,12 +54,16 @@ class SettingPage extends React.Component{
                             <label className={"settings-labels"} htmlFor="new-pass">New Password
                                 <input id={"new-pass"} type="password" className={"change-password-fields"}/>
                             </label>
-                            <label className={"settings-labels"} htmlFor="confirm-pass">Confirm new password
+                            <label className={"settings-labels"} htmlFor="confirm-pass">Confirm password
                                 <input id={"confirm-pass"} type="password" className={"change-password-fields"}/>
                             </label>
                         </fieldset>
                         <fieldset className="change-settings-buttons">
-                            <button className={"cancel-btn"}>Cancel</button>
+                            <button onClick={(event) => {
+                                event.preventDefault();
+                                console.log("go back");
+                                this.props.history.goBack();
+                            }} className={"cancel-btn"}>Cancel</button>
                             <input type="submit" className={"save-btn"}/>
                         </fieldset>
                     </form>
@@ -66,5 +72,7 @@ class SettingPage extends React.Component{
         );
     }
 }
+
+
 
 export default SettingPage;
