@@ -1,0 +1,31 @@
+.search-results{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(112,112,112,0.3);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+
+}
+
+.search-results-window{
+  background-color: white;
+  //display: flex;
+  //flex-direction: column;
+  //justify-content: flex-start;
+  align-self: center;
+  padding: 30px 60px 50px;
+  border-radius: 50px;
+  transform: scale(0.8);
+  height: 350px;
+  //overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
+
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+}
+
+
+

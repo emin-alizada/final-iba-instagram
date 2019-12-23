@@ -1,10 +1,12 @@
 import React from "react";
 import Icon from "../sharedComponents/Icon";
 import './css/settingsPage.scss'
-
+import './css/settingsPage-media.scss'
 
 import {connect} from "react-redux"
 
+import './css/settingsPage-media.scss'
+import ShareBtn from "../sharedComponents/sharePostBTN";
 class SettingPage extends React.Component{
     render() {
         console.log("user from settings",this.props.user);

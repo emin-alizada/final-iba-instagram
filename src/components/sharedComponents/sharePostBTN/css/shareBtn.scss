@@ -1,0 +1,23 @@
+.share-btn{
+  position: fixed;
+  bottom: 0;
+  background-color: #46d0d6;
+padding:10px;
+  border-radius: 20px;
+  display: flex;
+  align-self: center;
+  cursor: pointer;
+  text-align: center;
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  align-items: center;
+  left: calc(100% / 2 - 80px);
+  transform: scale(0.7);
+}
+
+.plus-icon{
+  max-width: 60px;
+
+}

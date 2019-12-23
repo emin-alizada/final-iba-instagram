@@ -9,6 +9,11 @@ import MediaCard from "./mediaCard/index"
 import Icon from "../sharedComponents/Icon";
 import Navbar from "../sharedComponents/Navbar/index"
 import ProfilePhoto from "../sharedComponents/profilePhoto/index";
+
+import ShareBtn from '../sharedComponents/sharePostBTN/index'
+import SearcResults from "../sharedComponents/searchResults";
+
+
 import UserProfileCard from "../sharedComponents/UserProfileCard";
 import SettingPage from "../settingsPage";
 
