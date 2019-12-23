@@ -19,6 +19,9 @@ class Navbar extends Component {
                             <Link to="/profile">
                                 <Icon name={"profile"} className={"leftMenu_profileIcon"}/>
                             </Link>
+                            <Link to={"/"}>
+                                <Icon name={"newPost"} />
+                            </Link>
                     </div>
                 </div>
             </div>

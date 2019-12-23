@@ -10,6 +10,8 @@ import {
     Redirect,
 } from "react-router-dom";
 
+
+
 class RegisterPanel extends React.Component {
     render() {
         return (
@@ -20,7 +22,7 @@ class RegisterPanel extends React.Component {
 
                     <div className={"form-container"}>
                         <form action="" onSubmit={this.registration} id={"register-form"} className={"register-form"}>
-                            <input type="text" placeholder={"Email"} className={"fields"}/>
+                            <input type="email" placeholder={"Email"} className={"fields"}/>
                             <input type="text" placeholder={"Full Name"} className={"fields"}/>
                             <input type="text" placeholder={"Username"} className={"fields"}/>
                             <div className="birthday-field-container">
@@ -62,7 +64,7 @@ class RegisterPanel extends React.Component {
             newUser.profile_photo = "https://elysator.com/wp-content/uploads/blank-profile-picture-973460_1280-e1523978675847.png";
             newUser.mail = formInputs[0].value;
             newUser.name = formInputs[1].value;
-            newUser.username = formInputs[2].value.toLowerCase();
+            newUser.username = formInputs[2].value;
             newUser.birthdate = formInputs[3].value;
             newUser.gender = event.target.querySelector("select").value;
             newUser.password = formInputs[4].value;
@@ -87,7 +89,8 @@ class RegisterPanel extends React.Component {
             })
         }
     }
-
 }
+
+
 
 export default RegisterPanel;

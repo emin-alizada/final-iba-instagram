@@ -2,9 +2,14 @@ import React from "react";
 import Icon from "../sharedComponents/Icon";
 import './css/settingsPage.scss'
 import './css/settingsPage-media.scss'
+
+import {connect} from "react-redux"
+
+import './css/settingsPage-media.scss'
 import ShareBtn from "../sharedComponents/sharePostBTN";
 class SettingPage extends React.Component{
     render() {
+        console.log("user from settings",this.props.user);
         return (
             <div className={"settings-page"}>
                 <div className="settings-window">
@@ -54,7 +59,7 @@ class SettingPage extends React.Component{
                             <label className={"settings-labels"} htmlFor="new-pass">New Password
                                 <input id={"new-pass"} type="password" className={"change-password-fields"}/>
                             </label>
-                            <label className={"settings-labels"} htmlFor="confirm-pass">Confirm password
+                            <label className={"settings-labels"} htmlFor="confirm-pass">Confirm new password
                                 <input id={"confirm-pass"} type="password" className={"change-password-fields"}/>
                             </label>
                         </fieldset>
@@ -73,6 +78,10 @@ class SettingPage extends React.Component{
     }
 }
 
+const mapStateToProps = store => {
+    return {
+        user: store.currentUser.user,
+    }
+};
 
-
-export default SettingPage;
+export default connect(mapStateToProps)(SettingPage);

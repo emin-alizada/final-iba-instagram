@@ -3,6 +3,9 @@ import "./feed.scss"
 import Preloader from "../../sharedComponents/Proloader";
 import Icon from "../../sharedComponents/Icon";
 
+import {connect} from "react-redux"
+
+
 class Feed extends Component {
     constructor() {
         super();
@@ -14,16 +17,9 @@ class Feed extends Component {
 
     componentDidMount() {
         const fetchData = async () => {
-            await fetch("https://my-json-server.typicode.com/emin-alizada/fakeServer/posts")
+            await fetch(`https://fp-instagram.herokuapp.com/users/${this.props.user.id}/feed`)
                 .then(result => result.json())
                 .then( async posts => {
-                    for (let post of posts) {
-                        await fetch(`https://my-json-server.typicode.com/emin-alizada/fakeServer/users/${post.user_id}`)
-                            .then(result => result.json())
-                            .then(json => {
-                                post.author_user = json;
-                            });
-                    }
                     this.setState({
                         isLoaded: true,
                         posts: posts,
@@ -35,22 +31,22 @@ class Feed extends Component {
 
 
     render() {
+        // {console.log(this.props.user)}
+        {console.log(this.state.posts)}
         return (
             <div className="feed">
                 {this.state.isLoaded ? this.state.posts.map((item, i) => (
-                        // console.log('item === ', item);
-
                     <div key={item.id} className="feed-post">
                         <div className="feed-post-header">
-                            <img src={item.author_user.profile_photo} className="feed-post-header-pp" alt=""/>
+                            <img src={item.user.profile_photo} className="feed-post-header-pp" alt=""/>
                                 <div className="feed-post-header-text">
-                                    <h3 className="feed-post-header-text-username">{item.author_user.username}</h3>
+                                    <h3 className="feed-post-header-text-username">{item.user.username}</h3>
                                     <p className="feed-post-header-text-date">{item.date} 09:41</p>
                                 </div>
                                 <Icon name={"sharePost"}/>
                                 <Icon name={"options"}/>
                         </div>
-                        <img src={item.img_url} className="feed-post-photo" alt=""/>
+                        <img src={item.image_url} className="feed-post-photo" alt=""/>
                             <div className="feed-post-footer">
                                 <div className="feed-post-footer-icon"><Icon name={"likePost"}/></div>
                                 <div className="feed-post-footer-icon"><Icon name={"commentPost"}/></div>
@@ -58,11 +54,36 @@ class Feed extends Component {
                             </div>
                         <div className="feed-post-comment-container">
                             <div className="feed-post-comment">
-                                <p className="feed-post-comment-username">{item.author_user.username}</p>
+                                <p className="feed-post-comment-username">{item.user.username}</p>
                                 <p className="feed-post-comment-itself">{item.description}</p>
                             </div>
                             <a className="feed-post-comment-view-all" href="#">view all Comments</a>
-                            <form className="feed-post-comment-new" action="">
+                            <form className="feed-post-comment-new" onSubmit={event => {
+                                event.preventDefault();
+                                const comment ={
+                                    comment_itself: event.target.querySelector("input").value,
+                                    commenter:{
+                                        id: this.props.user.id
+                                    }
+                                };
+                                console.log("comment:", comment);
+                                console.log("item id:", item.id);
+                                const sendComment = async () => {
+                                    await fetch(`https://fp-instagram.herokuapp.com/posts/${item.id}/comments`,{
+                                        headers: {
+                                            "Content-Type": "application/json",
+                                            "Accept": "application/json",
+                                            // "Origin": "http://localhost:3000"
+                                        },
+                                        method: "POST",
+                                        body: JSON.stringify(comment)
+                                    }).then(response => {
+                                        alert("Comment is added");
+                                    });
+                                };
+                                    sendComment();
+                                    console.log("Fetch is called");
+                            }} action="">
                                 <input type="text" className="feed-post-comment-new-text"
                                        placeholder="write comment..."/>
                                     <input type="submit" value="send" className="feed-post-comment-new-submit"/>
@@ -76,4 +97,10 @@ class Feed extends Component {
 
 }
 
-export default Feed;
+const mapStateToProps = store => {
+    return {
+        user: store.currentUser.user,
+    }
+};
+
+export default connect(mapStateToProps)(Feed);

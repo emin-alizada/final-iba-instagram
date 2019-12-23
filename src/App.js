@@ -17,25 +17,44 @@ import SearcResults from "./components/sharedComponents/searchResults";
 import SettingPage from "./components/settingsPage";
 import SharePost from "./components/sharedComponents/sharePost";
 
-function App() {
+import {connect} from "react-redux"
 
-  return (
-    <div className="App">
-{/*<SignInPage/>*/}
-        {/*{isGuest && {*/}
-        {/*}}*/}
-        <SettingPage/>
-        {/*<Router>*/}
-        {/*    <Switch>*/}
-        {/*        <Redirect exact from="/" to="/login" />*/}
-        {/*        <Route  path="/feed" component={MainFeed} />*/}
-        {/*        <Route  path="/login" component={SignInPage}/>*/}
-        {/*        <Route  path="/profile" component={UserProfile}/>*/}
-        {/*    </Switch>*/}
-        {/*</Router>*/}
 
-    </div>
-  );
+class App extends React.Component {
+    render() {
+        return (
+            <div className="App">
+                {console.log("authorized in app:", this.props.isAuthorized)}
+                <Router>
+                    {this.props.isAuthorized ?
+                        <Switch>
+                            <Route path="/feed" component={MainFeed}/>
+                            {/*<Route path="/login" component={SignInPage}/>*/}
+                            <Route path="/profile" component={UserProfile}/>
+                            <Redirect to="/feed"/>
+                        </Switch>
+                        :
+                        <Switch>
+                            <Route path="/login" component={SignInPage}/>
+                            <Redirect to="/login"/>
+                        </Switch>
+                    }
+                </Router>
+            </div>
+        )
+    }
 }
 
-export default App;
+const mapStateToProps = store => {
+    return {
+        user: store.currentUser.user,
+        isAuthorized: store.currentUser.isAuthorized
+    }
+};
+
+
+export default connect(mapStateToProps)(App);
+
+
+
+
