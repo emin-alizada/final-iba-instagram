@@ -1,16 +1,31 @@
-.container-for-feed{
-  margin-top: 40px;
+.container-for-feed {
+  width: 1000px;
+  margin-top: 80px;
+  padding-top: 50px;
   display: flex;
   justify-content: space-between;
-  padding-top: 100px;
 }
 
-.fixed-main-feed-profile{
-  width: calc((100% - 804px) / 1.5)
+.userProfileCardContainer {
+  width: 30%;
+  height: 500px;
+  border: 0.5px solid black;
 }
 
-.fixed-main-feed-profile-wrapper{
-  position: sticky;
-  top: 110px;
-  left: 0;
+.userProfileCard {
+  height: 70%;
+  background-color: red;
+  position: fixed;
+}
+
+
+@media screen and (max-width: 999px) {
+ 
+  .userProfileCardContainer {
+    display: none;
+  }
+
+  .container-for-feed {
+    width: unset;
+  }
 }

@@ -49,7 +49,7 @@ class Icon extends Component {
             {
                 type: "options",
                 url: options,
-                classes: "options-button"
+                classes: "feed_option"
             },
             {
                 type: "passwordLogIn",
