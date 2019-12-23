@@ -22,21 +22,21 @@ function App() {
   return (
     <div className="App">
 
-        <UserProfile/>
+        {/* <UserProfile/> */}
         {/* <SignInPage/> */}
         {/* <MainFeed/> */}
 
 
         {/*{isGuest && {*/}
         {/*}}*/}
-        {/*<Router>*/}
-        {/*    <Switch>*/}
-        {/*        <Redirect exact from="/" to="/login" />*/}
-        {/*        <Route  path="/feed" component={MainFeed} />*/}
-        {/*        <Route  path="/login" component={SignInPage}/>*/}
-        {/*        <Route  path="/profile" component={UserProfile}/>*/}
-        {/*    </Switch>*/}
-        {/*</Router>*/}
+        <Router>
+           <Switch>
+               <Redirect exact from="/" to="/login" />
+               <Route  path="/feed" component={MainFeed} />
+               <Route  path="/login" component={SignInPage}/>
+               <Route  path="/profile" component={UserProfile}/>
+           </Switch>
+        </Router>
 
     </div>
   );
