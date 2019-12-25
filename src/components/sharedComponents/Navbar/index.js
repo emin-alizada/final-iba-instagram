@@ -15,15 +15,34 @@ class Navbar extends Component {
                         <div className={"leftMenu_searchContainer"}>
                             <form action="" onSubmit={ async (event) =>{
                                 event.preventDefault();
-                                // await fetch(`https://fp-instagram.herokuapp.com/search`,{
-                                //     headers: {
-                                //         "Content-Type": "application/json",
-                                //         "Accept": "application/json",
-                                //         "Origin": "http://localhost:3000"
-                                //     },
-                                //     method: "POST",
-                                //     body: JSON.stringify({content:`${event.target.querySelector("input")[0]}`})
-                                // })
+                                const request = {
+                                    content:event.target.querySelector("input").value
+                                };
+                                await fetch(`https://fp-instagram.herokuapp.com/search`,{
+                                    headers: {
+                                        "Content-Type": "application/json",
+                                        "Accept": "application/json",
+                                        "Origin": "http://localhost:3000"
+                                    },
+                                    method: "POST",
+                                    body: JSON.stringify(request)
+                                })
+                                    .then(response => {
+                                        if (response.status === 200){
+                                            return response;
+                                        }
+                                        else{
+                                            alert("No users matched request parameters");
+                                            throw new Error("no user");
+                                        }
+                                    })
+                                    .then(response => response.json())
+                                    .then(search => {
+                                        this.props.history.push(`${this.props.match.path}/search_username`, {response: search});
+                                    })
+                                    .catch(e => {
+                                        console.log(e);
+                                    })
                             }}>
                                 <Icon name={"search"} className={"leftMenu_searchIcon"}/>
                                 <input type="text" className={"leftMenu_searchInput"} placeholder="search"/>
@@ -32,7 +51,7 @@ class Navbar extends Component {
                             <Link to="/profile">
                                 <Icon name={"profile"} className={"leftMenu_profileIcon"}/>
                             </Link>
-                            <Link to={"/"}>
+                            <Link to={`${this.props.match.path}/new`}>
                                 <Icon name={"newPost"}/>
                             </Link>
                     </div>

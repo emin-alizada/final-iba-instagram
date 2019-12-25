@@ -5,6 +5,9 @@ import Icon from "../../sharedComponents/Icon/index";
 
 import {connect} from "react-redux"
 
+import {Link, Route} from "react-router-dom";
+
+
 
 class Feed extends Component {
     constructor() {
@@ -62,11 +65,40 @@ class Feed extends Component {
                         <div className={"feed_descriptionContainer"}>
                            <p><b className={"feed_descriptionUsername"}>{`${item.user.username}`}</b> {item.description}</p>
                         </div>
-                        <p className={"feed_commentCounter"}>view {item.comments_counter} comments</p>
-                        <div className={"feed_commentContainer"}>
-                            <input type="text" placeholder="write comment..." className={"feed_inputComment"}/>
-                            <button className={"feed_sendBtn"}>send</button>
-                        </div>
+                            <p className={"feed_commentCounter"} onClick={
+                                ()=> {
+                                this.props.history.push("/feed/post", {post:item})
+                                }
+                            }>view {item.comments_counter} comments</p>
+                        <form action="" onSubmit={event => {event.preventDefault();
+                            const comment ={
+                            comment_itself: event.target.querySelector("input").value,
+                            commenter:{
+                            id: this.props.user.id
+                        }
+                        };
+                            const sendComment = async () => {
+                            await fetch(`https://fp-instagram.herokuapp.com/posts/${item.id}/comments`,{
+                            headers: {
+                            "Content-Type": "application/json",
+                            "Accept": "application/json",
+                            // "Origin": "http://localhost:3000"
+                        },
+                            method: "POST",
+                            body: JSON.stringify(comment)
+                        }).then(response => {
+                            // this.setState({...this.state, posts: posts.})
+                            alert("Comment is added");
+                        });
+                        };
+                            sendComment();
+                            console.log("Fetch is called, problem with comment counter");
+                        }}>
+                            <div className={"feed_commentContainer"}>
+                                <input type="text" placeholder="write comment..." className={"feed_inputComment"}/>
+                                <input type={"submit"} className={"feed_sendBtn"} value={"send"}/>
+                            </div>
+                        </form>
                     </div>
                 </div>
                 )}

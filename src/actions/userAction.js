@@ -18,6 +18,8 @@ export const verifyUser = (logInUser) => {
             }
         })
             .then(user => {
+                sessionStorage.setItem("isAuthorized", true);
+                sessionStorage.setItem("user", JSON.stringify(user));
                 dispatch({type: "VERIFIED_USER", payload:user})
             })
             .catch(e => {

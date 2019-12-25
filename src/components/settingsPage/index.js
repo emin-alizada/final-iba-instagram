@@ -36,7 +36,7 @@ class SettingPage extends React.Component{
                             mail: formInputs[4].value,
                             phone_number: formInputs[5].value,
                         };
-                        if(oldPassword === "" && newPassword === "" && newPasswordConfrim === ""){
+                       if(oldPassword === "" && newPassword === "" && newPasswordConfrim === ""){
                             await fetch(`https://fp-instagram.herokuapp.com/users/${this.props.user.id}`, {
                                 headers: {
                                     "Content-Type": "application/json",
@@ -48,12 +48,32 @@ class SettingPage extends React.Component{
                             }).then(response => {
                                 this.props.userUpdateToProps(this.props.user.id);
                                 alert("Updated is added");
-                            });
+                            })
+                                .then(()=>{
+                                    this.props.history.goBack();
+                                });
                         }
-                        else if(oldPassword !== "" && newPassword===newPasswordConfrim ){
-                            console.log("in setting old password check should be done");
+                        else if(oldPassword === this.props.user.password && newPassword===newPasswordConfrim && newPassword!=="" ){
+                            userUpdated.password = newPassword;
+                           await fetch(`https://fp-instagram.herokuapp.com/users/${this.props.user.id}`, {
+                               headers: {
+                                   "Content-Type": "application/json",
+                                   "Accept": "application/json",
+                                   "Origin": "http://localhost:3000"
+                               },
+                               method: "PUT",
+                               body: JSON.stringify(userUpdated)
+                           }).then(response => {
+                               this.props.userUpdateToProps(this.props.user.id);
+                               alert("Updated is added");
+                           })
+                               .then(()=>{
+                                   this.props.history.goBack();
+                               });
                         }
-                        console.log(oldPassword);
+                        else{
+                            alert("Please check the data");
+                       }
                     }}>
                         <fieldset className={"personal-info"}>
                             <label htmlFor="change-name" className={"settings-labels"}>Name
@@ -70,7 +90,6 @@ class SettingPage extends React.Component{
                                     {/*<option value="default-select-option" disabled={true}>-Please select your gender</option>*/}
                                     <option value="M" selected={this.props.user.gender==="M"} >Male</option>
                                     <option value="F" selected={this.props.user.gender==="F"}>Female</option>
-
                                 </select>
                             </label>
                             <label className={"settings-labels"} htmlFor="change-birthdate">Birthday
