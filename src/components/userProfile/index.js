@@ -27,6 +27,7 @@ import {
 
 import {connect} from "react-redux"
 import Preloader from "../sharedComponents/Proloader";
+import SharePost from "../sharedComponents/sharePost";
 
 
 class UserProfile extends React.Component {
@@ -55,7 +56,10 @@ class UserProfile extends React.Component {
     render() {
         return (
             <div className={"pageContainer"}>
-                <Navbar/>
+                <Route path="/profile" component={Navbar}/>
+                <Route path="/profile/search_username" component={SearcResults}/>
+                <Route path="/profile/recommendations" component={SearcResults}/>
+                <Route path="/profile/new" component={SharePost}/>
                 <Route path={`/profile/settings`} component={SettingPage}/>
                 {this.state.isLoaded ?
                     <div className={"userProfileContainer"}>
